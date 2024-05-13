@@ -1,7 +1,7 @@
 interface ErrorMessageProps {
-  message: string;
+  children: string;
 }
 
-export default function ErrorMessage({ message }: ErrorMessageProps) {
-  return <p className="text-xs text-error">{message}</p>;
+export default function ErrorMessage({ children }: ErrorMessageProps) {
+  return <p className="text-xs text-error px-1">{children}</p>;
 }
