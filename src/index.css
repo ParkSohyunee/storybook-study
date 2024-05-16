@@ -5,3 +5,17 @@
 body {
   font-family: "Noto Sans KR", sans-serif;
 }
+
+/* CLS를 고려해서 relative class의 p태그에 position 적용 - 방법 1 */
+.relative {
+  > p {
+    position: absolute;
+  }
+}
+
+/* tialwind에 적용하기, text-field라는 클래스를 만들고 지정하기 - 방법 2 */
+@layer components {
+  .text-field > p {
+    @apply absolute;
+  }
+}

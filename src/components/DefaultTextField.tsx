@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import ErrorMessage from "./ErrorMessage";
 import IconButton from "./IconButton";
 
@@ -9,7 +9,7 @@ interface DefaultTextFieldProps {
   iconAlt: string;
   errorMessage: string;
   isError: boolean;
-  onChange: () => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onClick: () => void;
 }
 
@@ -32,7 +32,7 @@ export default function DefaultTextField({
 
   return (
     <div
-      className="flex flex-col gap-1"
+      className="relative text-field"
       onFocus={() => setIsFocus(true)}
       onBlur={() => setIsFocus(false)}
     >
