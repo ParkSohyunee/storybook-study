@@ -3,7 +3,7 @@ import { fn } from "@storybook/test";
 import NavigationBar from "../components/NavigationBar";
 
 const meta = {
-  title: "Navigation/DefaultTextField",
+  title: "Navigation/NavigationBar",
   component: NavigationBar,
   parameters: {
     layout: "centered",
