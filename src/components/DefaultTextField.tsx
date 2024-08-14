@@ -3,6 +3,7 @@ import ErrorMessage from "./ErrorMessage";
 import IconButton from "./IconButton";
 
 interface DefaultTextFieldProps {
+  id?: string;
   value: string;
   placeholder: string;
   iconPath: string;
@@ -14,6 +15,7 @@ interface DefaultTextFieldProps {
 }
 
 export default function DefaultTextField({
+  id,
   value,
   placeholder,
   iconPath,
@@ -40,8 +42,10 @@ export default function DefaultTextField({
         className={`flex items-center text-sm text-primary border-b ${borderColor} p-1`}
       >
         <input
+          id={id}
+          data-testid={id} // getByTestId로 가져오는 id
           className="outline-none"
-          type="text"
+          type={id === "password" ? "password" : "text"}
           value={value}
           placeholder={placeholder}
           onChange={onChange}

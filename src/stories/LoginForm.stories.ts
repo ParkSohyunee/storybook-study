@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { userEvent, within, expect } from "@storybook/test";
 
-import { LoginForm } from "./LoginForm";
+import LoginForm from "../components/LoginForm";
 
 const meta: Meta<typeof LoginForm> = {
   title: "Form/LoginForm",
